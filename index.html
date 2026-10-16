@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>রক্তদান — রক্তদাতা ও জরুরি রক্তের অনুরোধ</title>
+  <meta name="description" content="Blood donor directory and emergency blood requests for Bangladesh. রক্তদাতা খুঁজুন ও জরুরি রক্তের অনুরোধ করুন।">
+  <meta name="theme-color" content="#b3141f">
+  <!-- Tighten connect-src to your API origin (e.g. https://YOURDOMAIN.com) once deployed. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https:; base-uri 'self'; form-action 'none'; object-src 'none'">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23b3141f' d='M32 4C22 18 12 28 12 41a20 20 0 0 0 40 0C52 28 42 18 32 4z'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip-link" href="#view" data-i18n="common.skip">মূল অংশে যান</a>
+<header class="site-header sticky-top bg-white border-bottom">
+  <nav class="navbar navbar-expand-lg" aria-label="Main">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-danger" href="#/">
+        <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><path fill="#b3141f" d="M32 4C22 18 12 28 12 41a20 20 0 0 0 40 0C52 28 42 18 32 4z"/></svg>
+        <span data-i18n="app.name">রক্তদান</span>
+      </a>
+      <div class="d-flex align-items-center gap-2 ms-auto order-lg-last">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="bn" class="active">বাংলা</button><span aria-hidden="true">|</span><button type="button" data-lang="en">English</button>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" data-i18n-aria="nav.menu" aria-label="মেনু"><span class="navbar-toggler-icon"></span></button>
+      </div>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="mainNav">
+          <li class="nav-item"><a class="nav-link" href="#/" data-i18n="nav.home">হোম</a></li>
+          <li class="nav-item"><a class="nav-link" href="#/donors" data-i18n="nav.donors">রক্তদাতা খুঁজুন</a></li>
+          <li class="nav-item"><a class="nav-link" href="#/requests" data-i18n="nav.requests">জরুরি অনুরোধ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#/directory" data-i18n="nav.directory">জেলাভিত্তিক তালিকা</a></li>
+          <li class="nav-item"><a class="nav-link" href="#/help" data-i18n="nav.help">সহায়তা</a></li>
+          <li class="nav-item"><a class="nav-link" href="#/contact" data-i18n="nav.contact">যোগাযোগ</a></li>
+        </ul>
+        <div class="lang-switch d-lg-none my-2" role="group" aria-label="Language">
+          <button type="button" data-lang="bn" class="active">বাংলা</button><span aria-hidden="true">|</span><button type="button" data-lang="en">English</button>
+        </div>
+        <div class="d-flex align-items-center gap-2" id="authArea"></div>
+      </div>
+    </div>
+  </nav>
+</header>
+<main id="view" tabindex="-1"><div class="text-center py-5"><div class="spinner-border text-danger"></div></div></main>
+<footer class="site-footer mt-5 py-4">
+  <div class="container d-flex flex-column flex-md-row justify-content-between gap-3">
+    <div><strong data-i18n="app.name">রক্তদান</strong><p class="small mb-0 opacity-75" data-i18n="footer.tagline">রক্তদাতা ও রোগীর মধ্যে সেতুবন্ধন।</p></div>
+    <ul class="list-inline mb-0 small">
+      <li class="list-inline-item"><a href="#/faq" data-i18n="nav.faq">সাধারণ প্রশ্ন</a></li>
+      <li class="list-inline-item"><a href="#/privacy" data-i18n="footer.privacy">গোপনীয়তা নীতি</a></li>
+      <li class="list-inline-item"><a href="#/terms" data-i18n="footer.terms">ব্যবহারের শর্তাবলী</a></li>
+      <li class="list-inline-item"><a href="#/contact" data-i18n="nav.contact">যোগাযোগ</a></li>
+    </ul>
+  </div>
+  <div class="container small opacity-75 mt-2" data-i18n="footer.disclaimer">এই সাইটের তথ্য শুধু সহায়ক; রক্তদানের যোগ্যতা অবশ্যই যোগ্য চিকিৎসকের মাধ্যমে নিশ্চিত করুন।</div>
+</footer>
+<div id="toasts" class="toast-box" role="status" aria-live="polite"></div>
+<div class="modal fade" id="dlg" tabindex="-1" aria-labelledby="dlgTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+    <div class="modal-header"><h2 class="modal-title h5" id="dlgTitle"></h2><button type="button" class="btn-close" data-bs-dismiss="modal" data-i18n-aria="common.close" aria-label="বন্ধ করুন"></button></div>
+    <div class="modal-body"><p id="dlgBody" class="mb-2"></p><textarea id="dlgInput" class="form-control d-none" rows="3" maxlength="255"></textarea></div>
+    <div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" data-i18n="common.cancel">বাতিল</button><button type="button" id="dlgOk" class="btn btn-primary" data-i18n="common.confirm">নিশ্চিত করুন</button></div>
+  </div></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+<script src="js/pages-public.js"></script>
+<script src="js/pages-auth.js"></script>
+<script src="js/pages-user.js"></script>
+<script src="js/pages-admin.js"></script>
+</body>
+</html>
